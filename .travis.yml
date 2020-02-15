@@ -1,0 +1,7 @@
+language: csharp
+solution: EventHub.FSharp.sln
+mono:
+  - latest
+after_script:
+  - nuget setApiKey $NUGET_API_KEY
+  - nuget push source/EventHub.FSharp/bin/Release/EventHub.FSharp.*.nupkg -Source https://api.nuget.org/v3/index.json 

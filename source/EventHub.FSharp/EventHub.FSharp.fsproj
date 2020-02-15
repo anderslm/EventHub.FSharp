@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Title>EventHub.FSharp</Title>
+    <Authors>SEAS-NVE</Authors>
+    <Description>F# friendly and thread-safe way of sending events in batches to an EventHub.</Description>
+    <Copyright>SEAS-NVE</Copyright>
+    <PackageProjectUrl>https://github.com/anderslm/EventHub.FSharp</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/anderslm/EventHub.FSharp</RepositoryUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <TargetFrameworks>net47;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+    <None Include="..\..\resources\icon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="ThreadSafeEventHubClient.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.EventHubs" Version="4.1.0" />
+  </ItemGroup>
+
+</Project>
